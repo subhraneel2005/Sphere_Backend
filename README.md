@@ -1,6 +1,6 @@
 # Sphere - Social Media App Backend
 
-![Sphere Logo](https://drive.google.com/file/d/1Ql2pHBeBuJxC-In_mF1EFDfVLuSxPeXK/view?usp=sharing)
+![Sphere Logo](https://c1.wallpaperflare.com/preview/574/146/533/lights-black-dark-night.jpg)
 
 Welcome to the backend repository of Sphere, a social media application built with the MERN stack. This repository contains the Express-based backend code for Sphere.
 
