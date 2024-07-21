@@ -46,6 +46,20 @@ app.get('/api/getAllPosts', async(req,res) => {
     }
 })
 
+// Get current user's Posts
+app.get('/api/getPosts', async (req, res) => {
+    const adminName = req.headers.adminname; // or req.body.adminName
+
+    try {
+        // Find posts that match the adminName
+        const posts = await Posts.find({ adminName });
+        res.json(posts);
+    } catch (error) {
+        res.status(500).json({ message: 'Error fetching posts' });
+    }
+});
+
+
 //Update Post by id
 app.put('/api/updatePost/:_id',async(req,res) => {
     try {
