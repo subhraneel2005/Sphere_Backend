@@ -1,19 +1,18 @@
 const express = require("express");
-const cors = require("cors");
+var cors = require("cors");
 const bodyParser = require("body-parser");
+const app = express();
+
+app.use(cors());
+app.use(bodyParser.json());
+
 const mongoose = require("mongoose");
 const Posts = require("./models/post");
 require("dotenv").config();
 
-const app = express();
 
 const PORT = 3000;
 
-//Middlewares
-app.use(bodyParser.json());
-app.use(cors());
-
-//MongoDB Cloudb Cluster Connection
 const uri = process.env.MONGO_URI;
 mongoose.connect(uri)
 const connection = mongoose.connection;
