@@ -48,7 +48,7 @@ app.get('/api/getAllPosts', async(req,res) => {
 })
 
 //Update Post by id
-app.put('/api/updatePost/:id',async(req,res) => {
+app.put('/api/updatePost/:_id',async(req,res) => {
     try {
         
         const updatedPost = await Posts.findByIdAndUpdate(req.params._id, req.body, { new: true });
