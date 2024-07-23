@@ -24,7 +24,9 @@ const postSchema = mongoose.Schema({
         type: String,
         default: () => new Date().toLocaleDateString('en-US')
     },
-    adminName: String
+    adminName: String,
+    adminImg: String,
+    adminUsername: String,
 })
 
 module.exports = mongoose.model("Posts", postSchema);
